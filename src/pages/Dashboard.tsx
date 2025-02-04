@@ -6,6 +6,7 @@ import { LineChart, Wallet, ArrowUpDown, BrainCircuit, TrendingUp, Users, Shield
 import { AITradeAssistant } from "@/components/AITradeAssistant";
 import { LiveTradeFeed } from "@/components/LiveTradeFeed";
 import { QuickActions } from "@/components/QuickActions";
+import { TradeInsights } from "@/components/TradeInsights";
 
 const Dashboard = () => {
   return (
@@ -58,6 +59,7 @@ const Dashboard = () => {
           </div>
           <div className="space-y-6">
             <AITradeAssistant />
+            <TradeInsights />
             <LiveTradeFeed />
           </div>
         </div>
