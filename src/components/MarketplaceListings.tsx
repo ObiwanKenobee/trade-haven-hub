@@ -38,12 +38,12 @@ const listings = [
 
 export const MarketplaceListings = () => {
   return (
-    <div className="space-y-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
       {listings.map((listing) => (
         <Card key={listing.id}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <div className="space-y-1">
-              <CardTitle className="text-xl">{listing.title}</CardTitle>
+              <CardTitle className="text-lg md:text-xl">{listing.title}</CardTitle>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Package className="h-4 w-4" />
                 <span>{listing.location}</span>
@@ -61,16 +61,16 @@ export const MarketplaceListings = () => {
             <div className="grid grid-cols-2 gap-4 py-4">
               <div>
                 <p className="text-sm font-medium">Quantity</p>
-                <p className="text-2xl font-bold">{listing.quantity}</p>
+                <p className="text-xl md:text-2xl font-bold">{listing.quantity}</p>
               </div>
               <div>
                 <p className="text-sm font-medium">Price</p>
-                <p className="text-2xl font-bold">{listing.price}</p>
+                <p className="text-xl md:text-2xl font-bold">{listing.price}</p>
               </div>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
               <p className="text-sm text-muted-foreground">{listing.seller}</p>
-              <Button>View Details</Button>
+              <Button className="w-full sm:w-auto">View Details</Button>
             </div>
           </CardContent>
         </Card>

@@ -11,15 +11,15 @@ const data = [
 
 export const MarketData = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-8 md:py-20 bg-gray-50">
       <div className="container px-4 mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Live Market Data</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 md:mb-12">Live Market Data</h2>
         <Card className="bg-white shadow-xl">
           <CardHeader>
-            <CardTitle>Market Trends</CardTitle>
+            <CardTitle className="text-xl md:text-2xl">Market Trends</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="h-[400px] w-full">
+            <div className="h-[300px] md:h-[400px] w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={data}>
                   <CartesianGrid strokeDasharray="3 3" />
