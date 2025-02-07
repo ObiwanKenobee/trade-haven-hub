@@ -11,7 +11,7 @@ export const KifaruScene = () => {
   const cameraRef = useRef<THREE.PerspectiveCamera>();
   const rendererRef = useRef<THREE.WebGLRenderer>();
   const particlesRef = useRef<THREE.Points>();
-  const tradeLinesRef = useRef<THREE.Line[]>([]);
+  const tradeLinesRef = useRef<THREE.Line<THREE.BufferGeometry, THREE.LineBasicMaterial>[]>([]);
 
   useEffect(() => {
     if (!containerRef.current) return;
