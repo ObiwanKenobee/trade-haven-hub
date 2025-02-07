@@ -3,8 +3,11 @@ import { AITradeAssistant } from "@/components/AITradeAssistant";
 import { LiveTradeFeed } from "@/components/LiveTradeFeed";
 import { QuickActions } from "@/components/QuickActions";
 import { TradeInsights } from "@/components/TradeInsights";
+import { RealTimeMarketAnalytics } from "@/components/RealTimeMarketAnalytics";
+import { AITradeRecommendations } from "@/components/AITradeRecommendations";
+import { SupplyDemandHeatmap } from "@/components/SupplyDemandHeatmap";
 import { Card } from "@/components/ui/card";
-import { LineChart, Wallet, ArrowUpDown, BrainCircuit, TrendingUp, Users, ShieldCheck } from "lucide-react";
+import { TrendingUp, Users, ShieldCheck } from "lucide-react";
 
 const Dashboard = () => {
   return (
@@ -46,13 +49,13 @@ const Dashboard = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2 space-y-6">
-            <Card className="p-6">
-              <h2 className="text-xl font-semibold mb-4">Market Overview</h2>
-              <div className="h-[300px] md:h-[400px]">
-                {/* Market data visualization will go here */}
-              </div>
-            </Card>
+          <RealTimeMarketAnalytics />
+          <AITradeRecommendations />
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2">
+            <SupplyDemandHeatmap />
           </div>
           <div className="space-y-6">
             <AITradeAssistant />
